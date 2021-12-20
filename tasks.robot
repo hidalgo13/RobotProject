@@ -68,8 +68,8 @@ Store the receipt as a PDF file
     [Arguments]    ${info}
     Wait Until Keyword Succeeds    1 min    1 sec    Wait Until Element Is Visible    id:receipt
     ${sreceipt_html}=    Get Element Attribute    id:receipt    outerHTML
-    Html To Pdf    ${sreceipt_html}    ${OUTPUT_DIR}${/}outputfile${/}${info}.pdf
-    [Return]    ${OUTPUT_DIR}${/}outputfile${/}${info}.pdf
+    Html To Pdf    ${sreceipt_html}    ${CURDIR}${/}outputfile${/}${info}.pdf
+    [Return]    ${CURDIR}${/}outputfile${/}${info}.pdf
 
 Take a screenshot of the robot
     [Arguments]    ${info}
